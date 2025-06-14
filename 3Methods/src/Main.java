@@ -8,7 +8,9 @@ public class Main {
         System.out.println("");
 
         System.out.println(Block2.abs(-2));
-        System.out.println(Block2.safeDiv(2,0));
+        System.out.println(Block2.safeDiv(4,0));
+        System.out.println(Block2.max(4,-8));
+        System.out.println(Block2.makeDecision(5, -4));
     }
 }
 
@@ -19,17 +21,31 @@ class Block2{
 
     public static int safeDiv(int x, int y)
     {
-        int result = 1;
-        if (y!=0)
-        {
-            result = x/y;
-        }
-        else
-        {
-            result = 0;
-        }
-        return result;
+        return y!=0 ? x/y : 0;
     }
+
+    public static int max(int x, int y)
+    {
+        return x >=y ? x : y;
+    }
+
+    public static String makeDecision(int x, int y){
+            String str = "";
+            if (x < y ){
+                str = x + "<" + y;
+            }
+            else if (x > y)
+            {
+                str =  x + ">" + y;
+            }
+
+            else if (x == y)
+            {
+                str =  x + "==" + y;
+            }
+            return str;
+    }
+
 
 
 }
