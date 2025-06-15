@@ -7,10 +7,17 @@ public class Main {
         System.out.printf("Hello and welcome!");
         System.out.println("");
 
-        System.out.println(Block2.abs(-2));
+        /*System.out.println(Block2.abs(-2));
         System.out.println(Block2.safeDiv(4,0));
         System.out.println(Block2.max(4,-8));
         System.out.println(Block2.makeDecision(5, -4));
+        System.out.println(Block2.max3(8,7,7));
+        System.out.println(Block2.sum3(10,6,4));
+        System.out.println(Block2.sum2(11,3));
+        System.out.println(Block2.is35(3));*/
+        System.out.println(Block2.magic6(0,6));
+
+
     }
 }
 
@@ -45,6 +52,57 @@ class Block2{
             }
             return str;
     }
+
+    public static int max3(int x, int y, int z)
+    {
+        int max = 0;
+        if((x>=y && y <= z) || ((x>=y && y >= z)))
+        {
+            max = x;
+        }
+        else if (x <= y && y <= z) {
+                max = z;
+        }
+        else
+            {
+            max = y;
+            }
+        return max;
+    }
+
+    public static boolean sum3(int x, int y, int z){
+        if ((x + y == z) || (x + z == y) || (y + z == x))
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public static int sum2(int x, int y){
+        return (x + y) >= 10 && (x + y) <= 19 ? x + y : 20;
+    }
+
+    public static boolean is35(int x)
+    {
+        if ((x%3==0 && x%5!=0) || (x%5==0 && x%3!=0))
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public static boolean magic6(int x, int y)
+    {
+        if ((x+y == 6) || (x-y == 6) || (y - x == 6) || x == 6 || y == 6){
+            return true;
+        }
+        else
+            return false;
+    }
+
+
 
 
 
