@@ -15,8 +15,9 @@ public class Main {
         System.out.println(Block2.sum3(10,6,4));
         System.out.println(Block2.sum2(11,3));
         System.out.println(Block2.is35(3));
-        System.out.println(Block2.magic6(0,6));*/
-        System.out.println(Block2.age(10));
+        System.out.println(Block2.magic6(0,6));
+        System.out.println(Block2.age(44));*/
+        System.out.println(Block2.day(0));
 
 
     }
@@ -116,6 +117,29 @@ class Block2{
         }
         else
             return x + " лет";
+    }
+
+    public static String day(int x)
+        {
+        String str =  "это не день недели";
+        switch (x) {
+            case 1:
+                return "понедельник";
+            case 2:
+                return "вторник";
+            case 3:
+                return "среда";
+            case 4:
+                return "четверг";
+            case 5:
+                return "пятница";
+            case 6:
+                return "суббота";
+            case 7:
+                return "воскресенье";
+        }
+        return str;
+
     }
 
 
