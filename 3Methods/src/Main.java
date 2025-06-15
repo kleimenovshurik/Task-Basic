@@ -14,8 +14,9 @@ public class Main {
         System.out.println(Block2.max3(8,7,7));
         System.out.println(Block2.sum3(10,6,4));
         System.out.println(Block2.sum2(11,3));
-        System.out.println(Block2.is35(3));*/
-        System.out.println(Block2.magic6(0,6));
+        System.out.println(Block2.is35(3));
+        System.out.println(Block2.magic6(0,6));*/
+        System.out.println(Block2.age(10));
 
 
     }
@@ -102,6 +103,20 @@ class Block2{
             return false;
     }
 
+    public static String age(int x)
+    {
+        //int z = x % 10;
+        if (x % 10 == 1 && x != 11)
+        {
+            return x + " год";
+        }
+        else if ((x % 10 == 2 && x != 12 && x != 13 && x != 14)  || (x % 10 == 3 && x != 12 && x != 13 && x != 14) || (x % 10 == 4 && x != 12 && x != 13 && x != 14))
+        {
+            return x + " года";
+        }
+        else
+            return x + " лет";
+    }
 
 
 
