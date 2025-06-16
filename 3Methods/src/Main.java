@@ -16,8 +16,9 @@ public class Main {
         System.out.println(Block2.sum2(11,3));
         System.out.println(Block2.is35(3));
         System.out.println(Block2.magic6(0,6));
-        System.out.println(Block2.age(44));*/
-        System.out.println(Block2.day(0));
+        System.out.println(Block2.age(44));
+        System.out.println(Block2.day(0));*/
+        Block2.printDays("воскресенье");
 
 
     }
@@ -141,6 +142,57 @@ class Block2{
         return str;
 
     }
+
+    public static void printDays(String x)
+    {
+        switch (x) {
+            case "понедельник":
+                System.out.println("понедельник");
+                System.out.println("вторник");
+                System.out.println("среда");
+                System.out.println("четверг");
+                System.out.println("пятница");
+                System.out.println("суббота");
+                System.out.println("воскресенье");
+                break;
+            case "вторник":
+                System.out.println("вторник");
+                System.out.println("среда");
+                System.out.println("четверг");
+                System.out.println("пятница");
+                System.out.println("суббота");
+                System.out.println("воскресенье");
+                break;
+            case "среда":
+                System.out.println("среда");
+                System.out.println("четверг");
+                System.out.println("пятница");
+                System.out.println("суббота");
+                System.out.println("воскресенье");
+                break;
+            case "четверг":
+                System.out.println("четверг");
+                System.out.println("пятница");
+                System.out.println("суббота");
+                System.out.println("воскресенье");
+                break;
+            case "пятница":
+                System.out.println("пятница");
+                System.out.println("суббота");
+                System.out.println("воскресенье");
+                break;
+            case "суббота":
+                System.out.println("суббота");
+                System.out.println("воскресенье");
+                break;
+            case "воскресенье":
+                System.out.println("воскресенье");
+                break;
+            default:
+                System.out.println("это не день недели");
+        }
+    }
+
 
 
 
