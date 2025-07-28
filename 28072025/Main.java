@@ -1,6 +1,4 @@
 
-import src2.A;
-import src2.B;
 
 import java.awt.*;
 import java.time.LocalTime;
@@ -275,6 +273,56 @@ public class Main {
 
 
         System.out.println(A.toString2());
+
+        //1.3.4
+        //Название отдела
+        DepartmentModified134 depmd1 = new DepartmentModified134();
+        depmd1.nazvanieOtdela = "Юридический";
+
+
+        EmployeeModified134 emplmd1 = new EmployeeModified134();
+        emplmd1.name = "Иван";
+        emplmd1.otdel = depmd1;
+
+        // создаем список сотрудников отдела Юридический
+        EmployeeModified134 [] test = new EmployeeModified134[2];
+        depmd1.mas = test;
+
+        //добавляем в список созданного сотрудника
+        depmd1.mas[0] = emplmd1;
+
+
+        EmployeeModified134 emplmd2 = new EmployeeModified134();
+        emplmd2.name = "Степан";
+        emplmd2.otdel = depmd1;
+
+        //указываем руководителя
+        depmd1.boss = emplmd2;
+
+        //добавляем в список созданного сотрудника
+        depmd1.mas[1] = emplmd2;
+
+        EmployeeModified134 emplmd3 = new EmployeeModified134();
+        emplmd3.name = "Феофан";
+        emplmd3.otdel = depmd1;
+
+        EmployeeModified134 [] primer = emplmd3.otdel.mas;
+
+        //обращаемся к сотруднику empld1 c именем Иван и видим его коллег, путем вызова toString2
+        emplmd1.otdel.toString2();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
