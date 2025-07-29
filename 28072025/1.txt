@@ -1,0 +1,4 @@
+        //1.4.6
+        Human146 lev = new Human146("Лев");
+        Human146 push = new Human146(lev, new Name145("Пушкин Сергей"));
+        Human146 alx = new Human146(push, "Александр");
