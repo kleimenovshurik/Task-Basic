@@ -311,6 +311,71 @@ public class Main {
         //обращаемся к сотруднику empld1 c именем Иван и видим его коллег, путем вызова toString2
         emplmd1.otdel.toString2();
 
+        //1.4.1
+        PointCoordinate141 pc1411 = new PointCoordinate141(3,5);
+        PointCoordinate141 pc1412= new PointCoordinate141(25,6);
+        PointCoordinate141 pc1413 = new PointCoordinate141(7,8);
+
+
+        //1.4.2.
+        PointCoordinate141 pc142Start = new PointCoordinate141(1,3);
+        PointCoordinate141 pc142End= new PointCoordinate141(23,8);
+
+        PointCoordinate141 pc142l2End= new PointCoordinate141(25,10);
+
+        Line142 l1421 = new Line142(pc142Start, pc142End);
+
+        Line142 l1422 = new Line142(5,10,pc142l2End.x,pc142l2End.y);
+
+        Line142 l1423 = new Line142(l1421.startCoordinate.x,l1421.startCoordinate.y, pc142l2End.x,pc142l2End.y);
+
+        //1.4.3
+        BreakedLine143 breakedLine143 = new BreakedLine143();
+
+        PointCoordinate141 pc1431 = new PointCoordinate141(3,5);
+        PointCoordinate141 pc1432 = new PointCoordinate141(25,6);
+        PointCoordinate141 pc1433 = new PointCoordinate141(7,8);
+        PointCoordinate141 [] massiv = new PointCoordinate141[3];
+        massiv[0] = pc1431;
+        massiv[1] = pc1432;
+        massiv[2] = pc1433;
+        System.out.println(massiv[0].toString());
+
+        BreakedLine143 breakedLine1432 = new BreakedLine143(massiv);
+
+        //1.4.4
+        House144 h1441 = new House144(2);
+        System.out.println(h1441.toString());
+
+        House144 h1442 = new House144(35);
+        House144 h1443 = new House144(91);
+
+        //1.4.5
+        Name145 kl = new Name145("Клеопатра");
+        Name145 asp = new Name145("Алексадр","Пушкин", "Сергеевич");
+        Name145 xb = new Name145("Христофон","Бонифатьевич");
+
+        //1.4.6
+        Human146 lev = new Human146("Лев");
+        Human146 push = new Human146(lev, new Name145("Пушкин Сергей"));
+        Human146 alx = new Human146(push, "Александр");
+
+        //1.4.7
+        Student147 st147Vas = new Student147("Вася", new Integer[3]);
+        st147Vas.marks[0] = 3;
+        st147Vas.marks[1] = 4;
+        st147Vas.marks[2] = 5;
+        Student147 st147Max = new Student147("Максим", null);
+        System.out.println(st147Max.toString());
+        System.out.println(st147Vas.toString());
+
+        //1.4.8
+
+
+
+
+
+
 
 
 
