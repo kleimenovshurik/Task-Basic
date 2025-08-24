@@ -370,6 +370,8 @@ public class Main {
         System.out.println(st147Vas.toString());
 
         //1.4.8
+        Cities148 cities148Msc = new Cities148("Москва");
+        Cities148 cities148SPb = new Cities148("Санкт-Петербург", new WaysToCities[2]);
 
 
 
